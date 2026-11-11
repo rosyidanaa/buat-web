@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rumah Senja - Kopi & Kitchen. Pesan antar via WhatsApp.">
+<title>Rumah Senja | Kopi & Kitchen</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- file CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<noscript><p style="padding:20px;text-align:center">Aktifkan JavaScript agar menu dan keranjang bisa digunakan.</p></noscript>
+
+<!-- ================= NAVBAR ================= -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#beranda" class="logo">Rumah<span>Senja</span></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#cara-pesan">Cara Pesan</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#reservasi">Reservasi</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+    <div class="nav-kanan">
+      <button class="btn-keranjang" id="buka-keranjang" aria-label="Buka keranjang">🛒 <span id="badge">0</span></button>
+      <button class="btn-hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="beranda">
+  <div class="wrap hero-isi">
+    <span class="status" data-status>● Memeriksa jam buka...</span>
+    <h1>Ngopi Santai,<br><em>Makan Enak</em>,<br>Diantar ke Rumah</h1>
+    <p class="hero-teks">Biji kopi pilihan, dapur yang selalu hangat, dan suasana yang bikin betah. Nggak sempat mampir? Pesan lewat WhatsApp, kami antar sampai depan pintu.</p>
+    <div class="hero-tombol">
+      <a href="#menu" class="btn btn-utama">Pesan Sekarang</a>
+      <a href="#reservasi" class="btn btn-outline">Reservasi Meja</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="hero-info">
+      <div><strong>4.9 ★</strong><span>Rating pelanggan</span></div>
+      <div><strong>± 30 menit</strong><span>Estimasi antar</span></div>
+      <div><strong>08.00 – 22.00</strong><span>Buka setiap hari</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KEUNGGULAN ================= -->
+<section class="wrap unggul reveal">
+  <div class="item-unggul"><span>☕</span><h3>Kopi Single Origin</h3><p>Biji kopi lokal disangrai tiap minggu agar selalu segar.</p></div>
+  <div class="item-unggul"><span>🔥</span><h3>Dimasak Saat Dipesan</h3><p>Tidak ada makanan yang dipanaskan ulang. Selalu fresh.</p></div>
+  <div class="item-unggul"><span>🛵</span><h3>Gratis Ongkir</h3><p>Untuk belanja di atas Rp 100.000 radius 2 km dari kafe.</p></div>
+</section>
+
+<!-- ================= MENU ================= -->
+<section class="wrap bagian" id="menu">
+  <p class="label tengah">Menu Kami</p>
+  <h2 class="judul tengah">Pilih Favoritmu</h2>
+
+  <div class="alat-menu">
+    <div class="filter" id="filter">
+      <button class="aktif" data-kat="semua">Semua</button>
+      <button data-kat="kopi">Kopi</button>
+      <button data-kat="nonkopi">Non-Kopi</button>
+      <button data-kat="makanan">Makanan</button>
+      <button data-kat="snack">Snack</button>
+      <button data-kat="dessert">Dessert</button>
+    </div>
+    <input type="search" id="cari" class="cari" placeholder="🔍 Cari menu...">
+  </div>
+
+  <!-- kartu menu dibuat otomatis oleh script.js -->
+  <div class="grid-menu" id="grid-menu"></div>
+  <p class="menu-kosong" id="menu-kosong" hidden>Menu yang kamu cari tidak ketemu 😅</p>
+</section>
+
+<!-- ================= CARA PESAN ================= -->
+<section class="cara" id="cara-pesan">
+  <div class="wrap">
+    <p class="label terang tengah">Gampang Banget</p>
+    <h2 class="judul putih tengah">Pesan dalam 4 Langkah</h2>
+    <div class="langkah">
+      <div class="reveal"><b>1</b><h3>Pilih Menu</h3><p>Tambahkan makanan dan minuman favoritmu ke keranjang.</p></div>
+      <div class="reveal"><b>2</b><h3>Isi Data</h3><p>Masukkan nama, alamat, dan pilih metode pembayaran.</p></div>
+      <div class="reveal"><b>3</b><h3>Kirim ke WhatsApp</h3><p>Pesanan tersusun otomatis, tinggal tekan kirim.</p></div>
+      <div class="reveal"><b>4</b><h3>Tunggu di Rumah</h3><p>Admin konfirmasi, kurir langsung berangkat.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TENTANG ================= -->
+<section class="tentang" id="tentang">
+  <div class="wrap tentang-isi">
+    <div class="tentang-foto reveal">
+      <div class="bingkai"><img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=900&q=80" alt="Barista menyiapkan kopi" loading="lazy"></div>
+      <div class="tentang-badge"><strong>Sejak</strong><span>2018</span></div>
+    </div>
+    <div class="tentang-teks reveal">
+      <p class="label">Cerita Kami</p>
+      <h2>Dari Kedai Kecil Jadi Tempat Pulang</h2>
+      <p>Rumah Senja lahir dari obrolan dua sahabat yang ingin punya tempat ngopi yang nyaman dan harganya bersahabat. Dari kedai 6 meja, sekarang kami melayani ratusan pelanggan setiap harinya.</p>
+      <p>Kami percaya makanan enak berawal dari bahan segar dan dibuat dengan sabar. Itulah kenapa semua menu kami racik sendiri, dari sambal sampai sirup karamel.</p>
+      <div class="angka">
+        <div><strong>7+</strong><span>Tahun</span></div>
+        <div><strong>40+</strong><span>Menu</span></div>
+        <div><strong>25rb+</strong><span>Pesanan terkirim</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALERI ================= -->
+<section class="wrap bagian" id="galeri">
+  <p class="label tengah">Galeri</p>
+  <h2 class="judul tengah">Suasana di Rumah Senja</h2>
+  <div class="galeri reveal">
+    <figure class="g-besar"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=80" alt="Interior kafe" loading="lazy"></figure>
+    <figure><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Secangkir kopi" loading="lazy"></figure>
+    <figure><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Hidangan restoran" loading="lazy"></figure>
+    <figure><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=600&q=80" alt="Pelanggan bersantai" loading="lazy"></figure>
+    <figure class="g-lebar"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Area makan" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- ================= TESTIMONI ================= -->
+<section class="testimoni-bg">
+  <div class="wrap bagian">
+    <p class="label tengah">Ulasan</p>
+    <h2 class="judul tengah">Kata Pelanggan Kami</h2>
+    <div class="grid-testi">
+      <div class="testi reveal">
+        <div class="bintang">★★★★★</div>
+        <p>"Kopi susu aren-nya juara, nggak kemanisan. Pesan antar lewat WA gampang banget, 25 menit sudah sampai."</p>
+        <div class="orang"><div class="avatar">RA</div><div><strong>Rina Aulia</strong><span>Desainer grafis</span></div></div>
+      </div>
+      <div class="testi reveal">
+        <div class="bintang">★★★★★</div>
+        <p>"Tempatnya cozy, cocok buat kerja. Nasi gorengnya wangi dan porsinya pas. Sering reservasi buat meeting."</p>
+        <div class="orang"><div class="avatar">DP</div><div><strong>Dimas Prakoso</strong><span>Freelancer</span></div></div>
+      </div>
+      <div class="testi reveal">
+        <div class="bintang">★★★★☆</div>
+        <p>"Pancake berry-nya lembut banget. Packing delivery rapi, minumannya nggak tumpah sama sekali."</p>
+        <div class="orang"><div class="avatar">ML</div><div><strong>Maya Lestari</strong><span>Mahasiswi</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESERVASI ================= -->
+<section class="reservasi" id="reservasi">
+  <div class="wrap reservasi-isi">
+    <div class="reservasi-teks reveal">
+      <p class="label terang">Reservasi</p>
+      <h2>Mau Kumpul Bareng? Booking Meja Dulu</h2>
+      <p>Cocok untuk arisan, ulang tahun, meeting, atau sekadar nongkrong. Isi form, kami konfirmasi lewat WhatsApp.</p>
+      <ul>
+        <li>✔ Bisa untuk 2 – 30 orang</li>
+        <li>✔ Area indoor dan outdoor</li>
+        <li>✔ Paket acara tersedia</li>
+      </ul>
+    </div>
+    <form class="kartu-form reveal" id="form-reservasi" novalidate>
+      <h3>Form Reservasi</h3>
+      <input class="field" type="text" id="r-nama" placeholder="Nama lengkap">
+      <input class="field" type="tel" id="r-hp" placeholder="No. WhatsApp">
+      <div class="dua-kolom">
+        <input class="field" type="date" id="r-tanggal">
+        <input class="field" type="time" id="r-jam">
+      </div>
+      <select class="field" id="r-orang">
+        <option value="2">2 orang</option><option value="4" selected>4 orang</option>
+        <option value="6">6 orang</option><option value="8">8 orang</option>
+        <option value="10">10 orang</option><option value="15">15+ orang</option>
+      </select>
+      <select class="field" id="r-area">
+        <option>Area Indoor (AC)</option><option>Area Outdoor</option><option>Tidak masalah</option>
+      </select>
+      <textarea class="field" id="r-catatan" rows="2" placeholder="Catatan (opsional), misal: ulang tahun"></textarea>
+      <button type="submit" class="btn btn-utama btn-penuh">Reservasi via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= KONTAK ================= -->
+<section class="wrap bagian" id="kontak">
+  <p class="label tengah">Kontak</p>
+  <h2 class="judul tengah">Kunjungi atau Hubungi Kami</h2>
+  <div class="kontak-grid">
+    <div class="kontak-info reveal">
+      <div class="info-item"><span>📍</span><div><h4>Alamat</h4><p>Jl. Kemang Raya No. 25, Jakarta Selatan</p></div></div>
+      <div class="info-item"><span>📞</span><div><h4>WhatsApp</h4><p>0812-3456-7890</p></div></div>
+      <div class="info-item"><span>🕗</span><div><h4>Jam Operasional</h4><p>Senin – Minggu<br>08.00 – 22.00 WIB</p></div></div>
+      <div class="info-item"><span>📷</span><div><h4>Instagram</h4><p>@rumahsenja.id</p></div></div>
+      <a href="#" class="btn btn-utama btn-penuh" id="wa-tanya" target="_blank" rel="noopener">Chat WhatsApp</a>
+    </div>
+    <div class="peta reveal">
+      <iframe src="https://www.google.com/maps?q=Kemang+Raya+Jakarta+Selatan&output=embed" loading="lazy" title="Lokasi Rumah Senja" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap footer-isi">
+    <a href="#beranda" class="logo">Rumah<span>Senja</span></a>
+    <p>Kopi & Kitchen. Pesan antar via WhatsApp setiap hari 08.00 – 22.00.</p>
+    <small>© 2025 Rumah Senja. Semua hak dilindungi.</small>
+  </div>
+</footer>
+
+<!-- tombol melayang -->
+<a href="#" class="wa-float" id="wa-float" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 24 24" width="30" height="30" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<button class="fab" id="fab" hidden>
+  <span>🛒 Lihat Pesanan</span>
+  <strong id="fab-info">0 item</strong>
+</button>
+
+<!-- ================= PANEL KERANJANG ================= -->
+<div class="overlay" id="overlay"></div>
+<aside class="panel" id="panel" aria-label="Keranjang pesanan">
+  <div class="panel-atas">
+    <h3>Pesanan Kamu</h3>
+    <button id="tutup-keranjang" aria-label="Tutup">✕</button>
+  </div>
+
+  <div class="panel-isi">
+    <div id="isi-keranjang"></div>
+
+    <div class="gratis" id="gratis" hidden>
+      <p id="teks-gratis"></p>
+      <div class="bar"><span id="bar"></span></div>
+    </div>
+
+    <div class="form-pesan">
+      <h4>Data Pengiriman</h4>
+      <div class="tipe" id="tipe">
+        <button type="button" class="aktif" data-tipe="antar">🛵 Diantar</button>
+        <button type="button" data-tipe="ambil">🏪 Ambil Sendiri</button>
+      </div>
+      <input class="field" type="text" id="p-nama" placeholder="Nama kamu *" autocomplete="name">
+      <input class="field" type="tel" id="p-hp" placeholder="No. WhatsApp kamu *" autocomplete="tel">
+      <div id="blok-antar">
+        <textarea class="field" id="p-alamat" rows="3" placeholder="Alamat lengkap + patokan *"></textarea>
+        <button type="button" class="btn-lokasi" id="btn-lokasi">📍 Gunakan lokasi saya</button>
+        <select class="field" id="p-zona"></select>
+      </div>
+      <select class="field" id="p-bayar">
+        <option>COD (Bayar di tempat)</option>
+        <option>Transfer Bank</option>
+        <option>QRIS</option>
+      </select>
+      <textarea class="field" id="p-catatan" rows="2" placeholder="Catatan (misal: less sugar, tanpa pedas)"></textarea>
+    </div>
+  </div>
+
+  <div class="panel-bawah">
+    <div class="baris"><span>Subtotal</span><span id="subtotal">Rp 0</span></div>
+    <div class="baris"><span>Ongkir</span><span id="ongkir">Rp 0</span></div>
+    <div class="baris total"><span>Total</span><strong id="total-harga">Rp 0</strong></div>
+    <button class="btn btn-wa btn-penuh" id="btn-wa">Kirim Pesanan via WhatsApp</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+<div class="galat" id="galat" hidden></div>
+
+<!-- file JavaScript (harus paling bawah) -->
+<script src="script.js"></script>
+</body>
+</html>
